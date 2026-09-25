@@ -1,9 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <strong>UPCOMING EVENTS!!!</strong>
+        <div class="announcement-track" id="announcementTrack"></div>
+    </div>
 
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Campus<span>Connect</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#calendar">Calendar</a>
+            <a href="#events">Events</a>
+            <a href="#saved">Saved</a>
+        </div>
+
+    </nav>
 
 
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                YOUR CAMPUS. YOUR EVENTS.
+            </p>
+
+            <h1>
+                Never miss what's<br>
+                happening on campus.
+            </h1>
+
+            <p class="hero-text">
+                Discover workshops, competitions, hackathons, seminars,
+                fests and more — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#calendar" class="primary-btn">
+                    View Calendar
+                </a>
+
+                <a href="#events" class="secondary-btn">
+                    Explore Events
+                </a>
+            </div>
+
+        </div>
+
+    </section>
 
 
+    <!-- CAMPUS CALENDAR -->
+    <section class="calendar-section" id="calendar">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                CAMPUS CALENDAR
+            </p>
+
+            <h2>
+                What's happening when?
+            </h2>
+
+            <p>
+                All upcoming campus events, organized by date.
+            </p>
+
+        </div>
+
+        <div class="calendar-list" id="calendarList">
+            <!-- Javascript will insert dates and events here -->
+        </div>
+
+    </section>
 
 
+    <!-- EVENTS -->
+    <section class="events-section" id="events">
 
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                DISCOVER
+            </p>
+
+            <h2>
+                Campus Events
+            </h2>
+
+            <p>
+                Find events that match your interests.
+            </p>
+
+        </div>
+
+
+        <div class="event-controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search events, clubs, venues..."
+            >
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="workshop">
+                    Workshops
+                </option>
+
+                <option value="competition">
+                    Competitions
+                </option>
+
+                <option value="hackathon">
+                    Hackathons
+                </option>
+
+                <option value="seminar">
+                    Seminars
+                </option>
+
+                <option value="fest">
+                    Fests
+                </option>
+
+                <option value="open-source">
+                    Open Source
+                </option>
+
+                <option value="sports">
+                    Sports
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div
+            class="event-container"
+            id="eventContainer">
+        </div>
+
+    </section>
+
+
+    <!-- SAVED EVENTS -->
+    <section class="saved-section" id="saved">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                YOUR EVENTS
+            </p>
+
+            <h2>
+                Saved Events
+            </h2>
+
+            <p>
+                Events you've saved for later.
+            </p>
+
+        </div>
+
+
+        <div
+            class="saved-container"
+            id="savedContainer">
+
+            <p class="empty-message">
+                You haven't saved any events yet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI BUTTON -->
+    <button
+        class="ai-button"
+        id="aiButton">
+
+        ✦
+
+    </button>
+
+
+    <!-- AI CHAT -->
+    <div
+        class="ai-chat"
+        id="aiChat">
+
+        <div class="ai-header">
+
+            <div>
+
+                <strong>
+                    CampusConnect AI
+                </strong>
+
+                <small>
+                    Ask about any campus event
+                </small>
+
+            </div>
+
+            <button id="closeAi">
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="chat-messages"
+            id="chatMessages">
+
+            <div class="message bot-message">
+
+                Hi! 👋 Ask me about campus events.
+
+                <br><br>
+
+                You can ask things like:
+
+                <br><br>
+
+                • What events are happening on 27th?<br>
+                • Are there any free events?<br>
+                • Show me workshops.<br>
+                • Where is the hackathon?<br>
+                • Who organizes the coding challenge?<br>
+                • What is the registration fee?<br>
+                • What events are happening this week?
+
+            </div>
+
+        </div>
+
+
+        <div class="suggestions">
+
+            <button>
+                Upcoming events
+            </button>
+
+            <button>
+                Free events
+            </button>
+
+            <button>
+                Workshops
+            </button>
+
+            <button>
+                Events on 27th
+            </button>
+
+        </div>
+
+
+        <form
+            class="chat-form"
+            id="chatForm">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Ask something..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                ➤
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            Campus<span>Connect</span>
+        </div>
+
+        <p>
+            Making campus life easier, one event at a time.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
